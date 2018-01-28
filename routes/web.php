@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'web\AppController@getApp')->middleware('auth');
+Route::get('/login', 'web\AppController@getLogin')->name('login')->middleware('guest');
