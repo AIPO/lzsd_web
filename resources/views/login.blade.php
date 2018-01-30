@@ -5,6 +5,9 @@
     <title>Roast</title>
 </head>
 <body>
-<a href="/login/google">Login Google</a>
+<a href="/login/google">Log In With Google</a>
+<a href="/login/facebook">
+    Log In With Facebook
+</a>
 </body>
 </html>

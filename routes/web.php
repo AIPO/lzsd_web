@@ -12,4 +12,7 @@
 */
 
 Route::get('/', 'web\AppController@getApp')->middleware('auth');
+//Auth routes
 Route::get('/login', 'web\AppController@getLogin')->name('login')->middleware('guest');
+Route::get('/login/{social}', 'web\AuthenticationController@getSocialRedirect')->middleware('guest');
+Route::get('/login/{social}/callback', 'web\AuthenticationController@getSocialCallback')->middleware('guest');
