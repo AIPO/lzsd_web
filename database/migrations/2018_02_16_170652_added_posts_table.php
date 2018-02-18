@@ -15,11 +15,9 @@ class AddedPostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
             $table->string('author');
-
             $table->string('title');
-            $table->taxt('text');
+            $table->text('text');
             $table->string('category');
             $table->timestamps();
         });
@@ -33,6 +31,6 @@ class AddedPostsTable extends Migration
     public
     function down()
     {
-        //
+        Schema::drop('posts');
     }
 }
